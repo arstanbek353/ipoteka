@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="another website">
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<title>title</title>
+
+</head>
+
+<body>
+	<div class="body-page">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="burger"></div>
+					<a href="" class="logo header__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="about.html">О компании</a>
+							</li>
+							<li class="nav__item">
+								<a href="service.html">Ипотечное кредитование</a>
+								<span class="nav__arrow"></span>
+								<ul class="nav__drop">
+									<li>
+										<a href="">Ипотека на квартиру</a>
+									</li>
+									<li>
+										<a href="">Ипотека на дом</a>
+									</li>
+									<li>
+										<a href="">Ипотека новостройка</a>
+									</li>
+									<li>
+										<a href="">Ипотека вторичка</a>
+									</li>
+									<li>
+										<a href="">Ипотека с материнским капиталом</a>
+									</li>
+									<li>
+										<a href="">Ипотека с плохой кредитной историей</a>
+									</li>
+									<li>
+										<a href="">Рефинансирование ипотеки</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav__item">
+								<a href="cooperation.html">Сотрудничество</a>
+							</li>
+							<li class="nav__item">
+								<a href="contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="soc-link header__soc-link">
+						<a href="" class="sq soc-link__item soc-link__item--viber"></a>
+						<a href="" class="sq soc-link__item soc-link__item--whatsapp"></a>
+						<a href="" class="sq soc-link__item soc-link__item--telega"></a>
+					</div>
+					<a href="" class="tel">
+						<span class="tel__num">8 800 444 88 33</span>
+						<span class="sq tel__icon"></span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<div class="bg-page">
+			<div class="container">
+				<div class="bg-page__inner bg-page__inner--right593"></div>
+			</div>
+		</div>
+		<main class="main">
+			<section class="contacts">
+				<div class="container">
+					<div class="contacts__grid">
+						<div class="contacts__content">
+							<div class="contacts__item">
+								<p class="mh mh-70-30 contacts__main-title">Наши контакты</p>
+								<p class="">Работаем с понедельника по пятницу с 10:00 до 19:00 <br>
+									Суббота и воскресенье - выходные дни</p>
+							</div>
+							<div class="contacts__item">
+								<a href="" class="h h-30 contacts__num">8 800 444 88 33</a>
+								<p>Звоните по всем вопросам</p>
+							</div>
+							<div class="contacts__item">
+								<p class="contacts__title">На ваши вопросы отвечает:</p>
+								<div class="operator">
+									<div class="operator__img">
+										<img src="img/operator.jpg" alt="">
+									</div>
+									<div class="operator__content">
+										<p class="operator__name">Миронова Ольга</p>
+										<p class="operator__pos">Менеджер отдела кредитования</p>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__item">
+								<p class="contacts__title">Наша адрес:</p>
+								<p>Москва, ул. Кировоградская 44 к1, офис 407</p>
+							</div>
+							<div class="contacts__item">
+								<p class="contacts__title">Пишите нам напрямую:</p>
+								<p>Задайте вопросы в соц.сетях</p>
+								<div class="soc-link soc-link--black contacts__soc-link">
+									<a href="" class="sq soc-link__item soc-link__item--viber"></a>
+									<a href="" class="sq soc-link__item soc-link__item--whatsapp"></a>
+									<a href="" class="sq soc-link__item soc-link__item--telega"></a>
+								</div>
+							</div>
+						</div>
+						<div class="call-text contacts__text-box">
+							<p class="call-text__title">Мы всегда рады помочь вам!</p>
+							<p class="call-text__text">Мы готовы предложить профессиональную помощь в вопросах кредитования: оформления кредитов, поиска кредитных программ, подаче заявок и подготовке документов.</p>
+							<a href="" class="btn" data-class="req">Написать нам</a>
+							<div class="call-text__img">
+								<img src="img/call-text.png" alt="">
+							</div>
+						</div>
+						<div class="map contacts__map">
+							<img class="map__img" src="img/map.jpg" alt="">
+
+							<div id="map"></div>
+							<script type="text/javascript">
+								ymaps.ready(init);
+								function init() {
+									var myMap = new ymaps.Map("map", {
+										// Координаты центра карты.
+										// Порядок по умолчанию: «широта, долгота».
+										// Чтобы не определять координаты центра карты вручную,
+										// воспользуйтесь инструментом Определение координат.
+										center: [55.789330, 37.560862],
+										// Уровень масштабирования. Допустимые значения:
+										// от 0 (весь мир) до 19.
+										zoom: 11
+									}),
+
+										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+											hintContent: 'Ленинградский проспект, 36с28',
+											balloonContent: 'КЛАВА'
+										}, {
+											// Опции.
+											// Необходимо указать данный тип макета.
+											iconLayout: 'default#image',
+											// Своё изображение иконки метки.
+											iconImageHref: 'img/logo-on-map.svg',
+											// Размеры метки.
+											iconImageSize: [74, 77],
+											// Смещение левого верхнего угла иконки относительно
+											// её "ножки" (точки привязки).
+											iconImageOffset: [-5, -38]
+										});
+									myMap.geoObjects.add(myPlacemark);
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="modal" data-modal="req">
+			<div class="modal__overlay" data-close="req"></div>
+			<div class="modal__inner">
+				<div class="form form--modal">
+					<a href="" class="modal__close" data-close="req"></a>
+					<p class="h h-70-35 form__main-title">Заявка <br>на консультацию</p>
+					<p class="form__subtitle">Укажите ваши данные и мы свяжемся с вами <br>в течении 15 минут!</p>
+					<form action="" class="form__inner">
+						<div class="form__item">
+							<input type="text" class="form__input" placeholder="Имя">
+						</div>
+						<div class="form__item">
+							<input type="text" class="form__input" placeholder="Телефон">
+						</div>
+						<div class="form__item">
+							<textarea class="form__textarea" name="" placeholder="Комментарий"></textarea>
+						</div>
+						<button class="btn">Оставить заявку</button>
+					</form>
+					<p class="form__consent">Нажимая на кнопку «Оставить заявку» вы соглашаетесь с <a href="">условиями обработки персональных данных</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="modal" data-modal="rev">
+			<div class="modal__overlay" data-close="rev"></div>
+			<div class="modal__inner">
+				<div class="form form--modal">
+					<a href="" class="modal__close" data-close="rev"></a>
+					<p class="h h-70-35 form__main-title">Оставить отзыв</p>
+					<form action="" class="form__inner">
+						<div class="form__item">
+							<input type="text" class="form__input" placeholder="Имя">
+						</div>
+						<div class="form__item">
+							<input type="text" class="form__input" placeholder="Телефон">
+						</div>
+						<div class="form__item">
+							<textarea class="form__textarea form__textarea--big" name="" placeholder="Комментарий"></textarea>
+						</div>
+						<button class="btn">Оставить отзыв</button>
+					</form>
+					<p class="form__consent">Нажимая на кнопку «Оставить заявку» вы соглашаетесь с <a href="">условиями обработки персональных данных</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="modal" data-modal="ser">
+			<div class="modal__overlay" data-close="ser"></div>
+			<div class="modal__inner">
+				<div class="form form--modal">
+					<a href="" class="modal__close" data-close="ser"></a>
+					<p class="h h-70-35 form__main-title">Наши услуги</p>
+					<div action="" class="form__inner">
+						<ul class="list-ser">
+							<li><a href="">Ипотека на квартиру</a></li>
+							<li><a href="">Ипотека на дом</a></li>
+							<li><a href="">Ипотека новостройка</a></li>
+							<li><a href="">Ипотека вторичка</a></li>
+							<li><a href="">Ипотека с материнским капиталом</a></li>
+							<li><a href="">Ипотека с плохой кредитной историей</a></li>
+							<li><a href="">Помощь в ипотеке</a></li>
+							<li><a href="">Ипотечный брокер</a></li>
+						</ul>
+						<a href="" class="btn" data-class="req">Оставить заявку</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal notification" data-modal="notification">
+			<div class="modal__overlay" data-close="notification"></div>
+			<div class="modal__inner">
+				<div class="notification__inner">
+					<a href="" class="modal__close" data-close="notification"></a>
+					<div class="notification__text">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal review-modal" data-modal="revmod">
+			<div class="modal__overlay" data-close="revmod"></div>
+			<div class="modal__inner">
+				<div class="review-modal__inner">
+					<a href="" class="modal__close" data-close="revmod"></a>
+					<div class="review-modal__content">
+						<div class="review-modal__img">
+							<img src="" alt="">
+						</div>
+						<div class="review-modal__name"></div>
+						<div class="review-modal__text"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<div class="footer__left">
+						<a href="" class="logo-footer">
+							<img src="img/logo-footer.svg" alt="">
+						</a>
+						<div class="footer-contacts">
+							<a href="" class="footer-contacts__number">
+								<span class="h h-30-35">8 800 555 99 66</span>
+								<span class="t">Все звонки бесплатные</span>
+							</a>
+							<div class="soc-link">
+								<a href="" class="sq soc-link__item soc-link__item--viber"></a>
+								<a href="" class="sq soc-link__item soc-link__item--whatsapp"></a>
+								<a href="" class="sq soc-link__item soc-link__item--telega"></a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="footer__right">
+							<div class="footer__item">
+								<p class="footer__title">Информация</p>
+								<div class="footer__list">
+									<a href="" class="footer__link">О компании</a>
+									<a href="" class="footer__link">Сотрудничество</a>
+									<a href="" class="footer__link">Рефинансирование ипотеки</a>
+									<a href="" class="footer__link">Контакты</a>
+								</div>
+							</div>
+							<div class="footer__item footer__item--big">
+								<p class="footer__title">Услуги</p>
+								<div class="footer__list">
+									<a href="" class="footer__link">Ипотека на квартиру</a>
+									<a href="" class="footer__link">Ипотека на дом</a>
+									<a href="" class="footer__link">Ипотека новостройка</a>
+									<a href="" class="footer__link">Ипотека вторичка</a>
+									<a href="" class="footer__link">Ипотека с материнским капиталом</a>
+									<a href="" class="footer__link">Ипотека с плохой кредитной историей</a>
+									<a href="" class="footer__link">Помощь в ипотеке</a>
+									<a href="" class="footer__link">Ипотечный брокер</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer__copyright">
+							<p>ЛионКредит 2016 - 2020 — профессиональные брокерские услуги при подборе и оформлении
+								кредитов
+							</p>
+							<div class="made">
+								<p class="made__text">Разработано <a href="https://requestdesign.ru/"
+										target="_balnck">REQUEST</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+</body>
+
+</html>

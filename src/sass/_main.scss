@@ -1,0 +1,340 @@
+$yellow: #FFB927;
+$red: #F76747;
+$grey: #959595;
+$bg-color: #fff8ed;
+.body-page {
+    // background-image: linear-gradient(90deg, rgba(255,248,233,1) 31%, rgba(255,255,255,1) 31%);
+    min-height: 100vh;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #333;
+    padding-top: 15.2rem;
+    position: relative;
+    @media (max-width: 48em) {
+        padding-top: 7.7rem * 2;
+        font-size: 3rem;
+        background-image: none;
+    }
+}
+
+.bg-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    overflow: hidden;
+    .container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+    }
+    &__inner {
+        position: absolute;
+        top: 0;
+        right: 106.5rem;
+        left: auto;
+        width: 100vw;
+        height: 100%;
+        background-color: $bg-color;
+        &--right593 {
+            right: 59.3rem;
+            left: auto;
+        }
+        &--left830 {
+            right: auto;
+            left: 83rem;
+        }
+        &--left760 {
+            right: auto;
+            left: 76rem;
+            border-bottom-left-radius: 3rem;
+            height: 90rem;
+        }
+        &--right1065 {
+            right: 106.5rem;
+            left: auto;
+            height: 86.8rem;
+            top: auto;
+            bottom: 0;
+        }
+    }
+    @media (max-width: 48em) {
+        display: none;
+    }
+}
+
+.h {
+    font-family: 'Oswald';
+    font-weight: 600;
+    color: #333;
+    line-height: 1.125;
+    &-55 {
+        font-size: 5.5rem;
+        @media (max-width: 48em) {
+            font-size: 5.5rem * 2;
+        }
+    }
+    &-30 {
+        font-size: 3rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-18 {
+        font-size: 1.8rem;
+        @media (max-width: 48em) {
+            font-size: 1.8rem * 2;
+        }
+    }
+    &-100-70 {
+        font-size: 10rem;
+        @media (max-width: 48em) {
+            font-size: 7rem * 2;
+        }
+    }
+    &-80-40 {
+        font-size: 8rem;
+        @media (max-width: 48em) {
+            font-size: 4rem * 2;
+        }
+    }
+    &-70-40 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 4rem * 2;
+        }
+    }
+    &-70-36 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 3.6rem * 2;
+        }
+    }
+    &-70-35 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-70-30 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-70-25 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 2.5rem * 2;
+        }
+    }
+    &-65-35 {
+        font-size: 6.5rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-60-45 {
+        font-size: 6rem;
+        @media (max-width: 48em) {
+            font-size: 4.5rem * 2;
+        }
+    }
+    &-60-30 {
+        font-size: 6rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-50-30 {
+        font-size: 5rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-50-20 {
+        font-size: 5rem;
+        @media (max-width: 48em) {
+            font-size: 2rem * 2;
+        }
+    }
+    &-48-54 {
+        font-size: 4.8rem;
+        @media (max-width: 48em) {
+            font-size: 5.4rem * 2;
+        }
+    }
+    &-40-30 {
+        font-size: 4rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-30-35 {
+        font-size: 3rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-30-25 {
+        font-size: 3rem;
+        @media (max-width: 48em) {
+            font-size: 2.5rem * 2;
+        }
+    }
+    &-28-35 {
+        font-size: 2.8rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-25-18 {
+        font-size: 2.5rem;
+        @media (max-width: 48em) {
+            font-size: 1.8rem * 2;
+        }
+    }
+}
+
+.mh {
+    font-family: 'Gilroy';
+    font-weight: 800;
+    color: #333;
+    line-height: 1.05;
+    &-55 {
+        font-size: 5.5rem;
+        @media (max-width: 48em) {
+            font-size: 5.5rem * 2;
+        }
+    }
+    &-30 {
+        font-size: 3rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-18 {
+        font-size: 1.8rem;
+        @media (max-width: 48em) {
+            font-size: 1.8rem * 2;
+        }
+    }
+    &-100-70 {
+        font-size: 10rem;
+        @media (max-width: 48em) {
+            font-size: 7rem * 2;
+        }
+    }
+    &-80-40 {
+        font-size: 8rem;
+        @media (max-width: 48em) {
+            font-size: 4rem * 2;
+        }
+    }
+    &-70-40 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 4rem * 2;
+        }
+    }
+    &-70-36 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 3.6rem * 2;
+        }
+    }
+    &-70-35 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-70-30 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-70-25 {
+        font-size: 7rem;
+        @media (max-width: 48em) {
+            font-size: 2.5rem * 2;
+        }
+    }
+    &-65-35 {
+        font-size: 6.5rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-60-45 {
+        font-size: 6rem;
+        @media (max-width: 48em) {
+            font-size: 4.5rem * 2;
+        }
+    }
+    &-60-30 {
+        font-size: 6rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-50-30 {
+        font-size: 5rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-50-20 {
+        font-size: 5rem;
+        @media (max-width: 48em) {
+            font-size: 2rem * 2;
+        }
+    }
+    &-48-54 {
+        font-size: 4.8rem;
+        @media (max-width: 48em) {
+            font-size: 5.4rem * 2;
+        }
+    }
+    &-40-30 {
+        font-size: 4rem;
+        @media (max-width: 48em) {
+            font-size: 3rem * 2;
+        }
+    }
+    &-40-20 {
+        font-size: 4rem;
+        @media (max-width: 48em) {
+            font-size: 2rem * 2;
+        }
+    }
+    &-30-35 {
+        font-size: 3rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-30-25 {
+        font-size: 3rem;
+        @media (max-width: 48em) {
+            font-size: 2.5rem * 2;
+        }
+    }
+    &-28-35 {
+        font-size: 2.8rem;
+        @media (max-width: 48em) {
+            font-size: 3.5rem * 2;
+        }
+    }
+    &-25-18 {
+        font-size: 2.5rem;
+        @media (max-width: 48em) {
+            font-size: 1.8rem * 2;
+        }
+    }
+}

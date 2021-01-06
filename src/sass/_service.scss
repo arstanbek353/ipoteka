@@ -1,0 +1,47 @@
+.banner-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 4.4rem;
+    &__stat {
+        padding-top: 2.6rem;
+    }
+    &__slider {
+        width: 105.5rem;
+        position: relative;
+        padding-top: 3rem;
+        .sl-pag {
+            padding-left: 2rem;
+        }
+        .advantage__bottom {
+            display: none;
+        }
+    }
+    @media (max-width: 48em) {
+        flex-direction: column-reverse;
+        &__stat {
+            display: block;
+            padding-top: 2.6rem;
+            display: none;
+        }
+        &__advantage {
+            margin-bottom: 13rem;
+        }
+        &__slider {
+            width: 100%;
+            position: relative;
+            padding: 4rem;
+            padding-top: 5rem;
+            margin-top: 0rem;
+            .sl-pag, .sl-nav {
+                display: none;
+            }
+            .advantage__item {
+                margin-bottom: 6.6rem;
+            }
+            .advantage-slider__main-title {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,288 @@
+.calc {
+    margin-bottom: 17.5rem;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 7.5rem 9.6rem 10.2rem;
+        background-color: #fff;
+        box-shadow: 3.5rem 3rem 11rem rgba(58, 35, 0, 0.1);
+        border-radius: 3rem;
+    }
+    &__head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+    &__main-title {
+    }
+    &__title {
+        width: 49.4rem;
+        padding-top: 2rem;
+        font-size: 3rem;
+        font-weight: 600;
+        span {
+            position: relative;
+            padding-right: 4.5rem;
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3.6rem;
+                height: 3.6rem;
+                @include bg-icon;
+                background-image: url(../img/clock.svg);
+            }
+        }
+    }
+    &__left {
+        width: 63rem;
+    }
+    &__item {
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__box {
+        border: 0.1rem solid #E6E6E6;
+        border-bottom: none;
+        border-radius: 0.5rem;
+        padding: 1.8rem 2.2rem;
+    }
+    &__key {
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+    &__input {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+        font-size: 3rem;
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        &::placeholder {
+            font-size: 3rem;
+            font-family: 'Oswald';
+            font-weight: 600;
+            color: #333;
+            line-height: 1.125;
+        }
+    }
+    &__scale {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: $grey;
+    }
+    &__range-bar {
+        top: -1.3rem;
+        position: relative;
+    }
+    &__right {
+        width: 49.4rem;
+    }
+    &__content {
+        text-align: center;
+        padding: 6.7rem 0 5.8rem;
+        background-color: #fff8e9;
+        border-radius: 3rem;
+    }
+    &__month {
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    &__num {
+        margin-bottom: 8rem;
+    }
+    &__text {
+        padding: 0 6.5rem;
+        margin-bottom: 2.7rem;
+        p {
+            margin-bottom: 2rem;
+            font-weight: 300;
+            font-size: 1.6rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__attention {
+        span {
+            font-weight: 600;
+            color: #F76747;
+        }
+    }
+    @media (max-width: 48em) {
+        margin-bottom: 32.5rem;
+        &__inner {
+            display: block;
+            padding: 13rem 4rem 4.2rem;
+            box-shadow: 7rem 6rem 22rem rgba(58, 35, 0, 0.1);
+            border-radius: 6rem;
+        }
+        &__head {
+            display: block;
+            margin-bottom: 7rem;
+        }
+        &__main-title {
+        }
+        &__title {
+            width: auto;
+            padding-top: 4.4rem;
+            font-size: 4rem;
+            span {
+                padding-right: 6rem;
+                &::after {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+        &__left {
+            width: auto;
+            margin-bottom: 8.5rem;
+        }
+        &__item {
+            margin-bottom: 5.6rem;
+        }
+        &__box {
+            border: 0.2rem solid #E6E6E6;
+            border-bottom: none;
+            border-radius: 1rem;
+            padding: 2.4rem 2.4rem;
+        }
+        &__key {
+            font-size: 3.6rem;
+            margin-bottom: 0.5rem;
+        }
+        &__value {
+        }
+        &__input {
+            font-size: 5rem;
+            &::placeholder {
+                font-size: 5rem;
+            }
+        }
+        &__scale {
+            font-size: 3rem;
+        }
+        &__range-bar {
+            top: -0.5rem;
+            position: relative;
+            margin-bottom: 1.6rem;
+        }
+        &__right {
+            width: auto;
+        }
+        &__content {
+            padding: 9rem 0 10rem;
+            border-radius: 4rem;
+        }
+        &__month {
+            font-size: 3.6rem;
+            margin-bottom: 1rem;
+        }
+        &__num {
+            margin-bottom: 12.5rem;
+        }
+        &__text {
+            padding: 0 6.5rem;
+            margin-bottom: 4rem;
+            p {
+                margin-bottom: 3rem;
+                font-size: 3rem;
+            }
+        }
+        &__attention {
+            span {
+                font-weight: 600;
+                color: #F76747;
+            }
+        }
+
+    }
+}
+
+.price-scrollbar {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__line {
+        height: 0.5rem;
+        background-color: #F76747;
+        width: 50%;
+    }
+    &__thumb {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        border: 0.5rem solid #F76747;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+
+.range-bar {
+    .irs--flat {
+        height: 2.5rem;
+    }
+    .irs-handle {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        border: 0.5rem solid #F76747;
+        background-color: #fff;
+        top: 0rem;
+        cursor: pointer;
+        i {
+            display: none !important;
+        }
+    }
+    .irs-line {
+        background-color: #F0F0F0;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        top: 1rem;
+    }
+    .irs-bar {
+        background-color: #F76747;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        top: 1rem;
+    }
+    .irs-min, .irs-max, .irs-from, .irs-to, .irs-single {
+        opacity: 0;
+    }
+    @media (max-width: 48em) {
+        .irs--flat {
+            height: 6.6rem;
+        }
+        .irs-handle {
+            width: 6.6rem;
+            height: 6.6rem;
+            border-radius: 100%;
+            border: 1rem solid #F76747;
+        }
+        .irs-line {
+            height: 1rem;
+            top: 2.8rem;
+        }
+        .irs-bar {
+            height: 1rem;
+            top: 2.8rem;
+        }
+    }
+}

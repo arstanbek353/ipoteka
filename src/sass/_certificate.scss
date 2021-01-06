@@ -1,0 +1,123 @@
+.certificate {
+    // margin-bottom: 20rem;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+    &__slider {
+        width: 83rem;
+        padding-bottom: 10rem;
+    }
+    &__img {
+        width: 47.3rem;
+        height: 60rem;
+        box-shadow: 2rem 2rem 8rem rgba(58, 35, 0, 0.12);
+        border-radius: 3rem 1rem 3rem 3rem;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    @media (max-width: 48em) {
+        margin-bottom: 26rem;
+        margin-top: -7.7rem;
+        .container {
+            padding-right: 1rem;
+        }
+        &__inner {
+            display: block;
+        }
+        &__slider {
+            width:100%;
+            padding-bottom: 0rem;
+        }
+        &__img {
+            display: none;
+        }
+    }
+}
+
+.certificate-slider {
+    position: relative;
+    &__main-title {
+        font-size: 3rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 2.2rem;
+            height: 2.9rem;
+            @include bg-icon;
+            background-image: url(../img/document.svg);
+            margin-left: 1rem;
+            margin-top: -0.5rem;
+        }
+    }
+    &__wrapper {
+        height: auto;
+    }
+    &__slide {
+        padding-right: 2rem;
+        padding-bottom: 4rem;
+        padding-top: 3.4rem;
+        width: 20.75rem;
+    }
+    &__item {
+        display: block;
+        width: 18.75rem;
+        height: 24.2rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        box-shadow: 1.5rem 0.5rem 1.5rem rgba(58, 35, 0, 0.12);
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__sl-nav {
+        position: absolute;
+        top: -0.8rem;
+        right: 1.1rem;
+    }
+    @media (max-width: 48em) {
+        &__main-title {
+            font-size: 5rem;
+            padding: 0rem;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 2.2rem * 2;
+                height: 2.9rem * 2;
+                margin-left: 2.4rem;
+                margin-top: -0.5rem;
+            }
+        }
+        &__slide {
+            padding-bottom: 7.5rem;
+            padding-top: 6.6rem;
+            width: auto;
+        }
+        &__item {
+            width: 100%;
+            height: 30rem;
+            border-radius: 4rem;
+            box-shadow: 1.5rem 0.5rem 1.5rem rgba(58, 35, 0, 0.12);
+        }
+        .sl-pag {
+            padding-right: 4rem;
+        }
+        &__sl-nav {
+            position: static;
+            top: 0rem;
+            right: 0rem;
+        }
+    }
+}
